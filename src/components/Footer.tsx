@@ -29,7 +29,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Liên kết</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-red-400">
+                <a href="/" className="text-gray-400 hover:text-red-400">
                   Trang chủ
                 </a>
               </li>
@@ -82,16 +82,36 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Theo dõi</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-red-400 text-xl">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-red-400 text-xl"
+                title="Facebook"
+                aria-label="Facebook"
+              >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 text-xl">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-red-400 text-xl"
+                title="Twitter"
+                aria-label="Twitter"
+              >
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 text-xl">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-red-400 text-xl"
+                title="YouTube"
+                aria-label="YouTube"
+              >
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 text-xl">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-red-400 text-xl"
+                title="Instagram"
+                aria-label="Instagram"
+              >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>

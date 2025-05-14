@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { searchMovie } from "../services/ophim";
+import { searchMovie } from "../services/APIophim";
 import MovieCard from "../components/MovieCard";
 
 export default function SearchResult() {
