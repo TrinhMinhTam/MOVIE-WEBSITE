@@ -10,8 +10,9 @@ export async function getHomeMovies() {
 }
 
 export async function getMovieDetail(slug: string) {
-  const res = await api.get(`/v1/api/phim/${slug}`);
-  return res.data.data;
+  const res = await api.get(`/phim/${slug}`);
+  console.log("API", res.data.movie);
+  return res.data.movie;
 }
 
 export async function searchMovie(keyword: string) {
