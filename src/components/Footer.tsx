@@ -16,7 +16,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center">
               <FontAwesomeIcon icon={faFilm} className="text-red-500 mr-2" />
-              PhimMới
+              Rạp<span className="text-red-500">Phim</span>
             </h3>
             <p className="text-gray-400">
               Trang web xem phim online miễn phí, chất lượng cao với giao diện

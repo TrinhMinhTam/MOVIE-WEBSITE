@@ -9,6 +9,7 @@ export default function MovieDetail() {
   useEffect(() => {
     if (slug) {
       getMovieDetail(slug).then((res) => {
+        console.log("detail", res);
         setMovie(res);
       });
     }
@@ -18,13 +19,13 @@ export default function MovieDetail() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">{movie.movie.name}</h2>
+      <h2 className="text-2xl font-bold mb-4">{movie.name}</h2>
       <div className="aspect-video w-full">
         <iframe
-          src={movie.episodes[0].server_data[0].link_embed}
+          src={`https://ophim1.com/phim/${movie.slug}`}
           allowFullScreen
           className="w-full h-full"
-          title={`Watch ${movie.movie.name}`}
+          title={`Watch ${movie.name}`}
         ></iframe>
       </div>
     </div>

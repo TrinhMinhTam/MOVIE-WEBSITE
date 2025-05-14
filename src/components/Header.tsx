@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex items-center space-x-2">
           <FontAwesomeIcon icon={faFilm} className="text-red-500 text-2xl" />
           <h1 className="text-xl font-bold text-white">
-            Phim<span className="text-red-500">Mới</span>
+            Rạp<span className="text-red-500">Phim</span>
           </h1>
         </div>
 
