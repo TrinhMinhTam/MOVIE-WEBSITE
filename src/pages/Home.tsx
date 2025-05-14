@@ -1,6 +1,7 @@
 // src/pages/Home.tsx
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getMovies } from "../services/APIophim";
 
 type Movie = {
   _id: string;
@@ -20,17 +21,14 @@ export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [featured, setFeatured] = useState<Movie | null>(null);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(20);
+  const [totalPages, setTotalPages] = useState(1225);
 
   useEffect(() => {
-    fetch(`https://ophim1.com/danh-sach/phim-moi-cap-nhat?page=${page}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.items);
-        setFeatured(data.items[0]);
-        // setTotalPages(data.pagination.totalPages);
-      })
-      .catch((err) => console.error(err));
+    getMovies(page.toString(), (res) => {
+      setMovies(res.items);
+      setFeatured(res.items[0]);
+      setTotalPages(res.pagination.totalPages);
+    });
   }, [page]);
 
   const handlePageClick = (pageNumber: number) => setPage(pageNumber);
@@ -78,7 +76,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-gray-300 mb-6 line-clamp-4">
-                {featured.description}
+                {featured.slug || "Mô tả phim chưa có."}
               </p>
               <div className="flex space-x-4">
                 <Link

@@ -22,14 +22,14 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <FontAwesomeIcon icon={faFilm} className="text-red-500 text-2xl" />
-          <h1 className="text-xl font-bold text-white">
+          <a href="/" className="text-xl font-bold text-white">
             Rạp<span className="text-red-500">Phim</span>
-          </h1>
+          </a>
         </div>
 
         {/* Menu */}
         <div className="hidden md:flex space-x-6 text-white">
-          <a href="#" className="hover:text-red-400">
+          <a href="/" className="hover:text-red-400">
             Trang chủ
           </a>
           <a href="#" className="hover:text-red-400">
